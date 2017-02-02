@@ -1,2 +1,2 @@
 all:
-	g++ src/* -o ./bin/a.out
+	g++ -std=c++11 src/* -o ./bin/a.out

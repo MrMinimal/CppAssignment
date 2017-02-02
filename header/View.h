@@ -1,5 +1,7 @@
 #pragma once
 
+#include <iostream>
+
 #include "../header/IView.h"
 #include "../header/IController.h"
 #include "../header/SelectionItem.h"
@@ -16,11 +18,18 @@ class View : public IView
 public:
 	View();
 	virtual void setController(IController* controller);
+
 	virtual void showText();
 	virtual void showText(std::string text);
+
+	virtual void showItem(int index, std::string content);
+
 	virtual void showDataSelection(std::list<std::string>* items);
-	virtual std::string readInput();
+
+	virtual std::string		readInput();
+	virtual std::string		readInput(std::string inputDescription);
 
 private:
 	IController* controller;
+	virtual void showSelection(std::list<std::string>* items);
 };

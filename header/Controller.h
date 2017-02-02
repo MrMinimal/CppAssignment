@@ -24,4 +24,6 @@ private:
 	// references to different parts of the MVC concept
 	View*	view;
 	Model*	model;
+
+	std::string readInput(IView* view);
 };

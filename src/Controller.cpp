@@ -11,9 +11,10 @@ void Controller::startDB()
 {
 	std::list<std::string> dataSelectionItems;
 
-	dataSelectionItems.push_back("test1");
-	dataSelectionItems.push_back("test2");
-	dataSelectionItems.push_back("test3");
+	dataSelectionItems.push_back("Load from file");
+	dataSelectionItems.push_back("Create new database");
 
 	view->showDataSelection(&dataSelectionItems);	
+
+	view->readInput("Selection");
 }
