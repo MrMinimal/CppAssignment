@@ -2,10 +2,11 @@
 
 Model::Model()
 {
-	// TODO
+	
 }
 
-void Model::setController(IController * controller)
+
+void Model::setController(IController* controller)
 {
-	// TODO
+	this->controller = controller;
 }

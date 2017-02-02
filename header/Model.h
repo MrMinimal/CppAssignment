@@ -1,17 +1,27 @@
 #pragma once
 
-#include "../header/IModel.h"
+#include <list>
 
-// Iterates over the contents of a GargantuanTable.
-// Example:
-//    GargantuanTableIterator* iter = table->NewIterator();
-//    for (iter->Seek("foo"); !iter->done(); iter->Next()) {
-//      process(iter->key(), iter->value());
-//    }
-//    delete iter;
+#include "../header/IModel.h"
+#include "../header/IController.h"
+#include "../header/Course.h"
+#include "../header/Student.h"
+#include "../header/Lecturer.h"
+
+// Model part of the MVC Model
+// 
+// Holds all the relevant data to save/load
+// Communicates via the IModel interface with the Controller
 class Model : public IModel
 {
 public:
 	Model();
 	virtual void setController(IController* controller);
+
+private:
+	IController*		controller;
+
+	std::list<Course>	courses;
+	std::list<Student>	students;
+	std::list<Lecturer>	lecturers;
 };
