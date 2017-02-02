@@ -9,5 +9,5 @@ Controller::Controller(View * view, Model * model)
 
 void Controller::startDB()
 {
-	// TODO
+	view->showDataSelection();	
 }

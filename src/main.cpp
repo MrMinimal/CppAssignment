@@ -19,7 +19,7 @@ std::string readInput(IView* view)
 		// Guard clauses
 		if (false)			// TODO
 		{
-			break;
+			continue;
 		}
 
 		usableInput = true;

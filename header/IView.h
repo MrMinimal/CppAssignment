@@ -15,6 +15,7 @@ class IView
 {
 public:
 	virtual void			setController(IController* controller) = 0;
+	virtual void			showText() = 0;
 	virtual void			showText(std::string text) = 0;
 	virtual void			showDataSelection() = 0;
 	virtual std::string		readInput() = 0;

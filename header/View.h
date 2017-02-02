@@ -1,6 +1,7 @@
 #pragma once
 
-#include "IView.h"
+#include "../header/IView.h"
+#include "../header/IController.h"
 	
 // Iterates over the contents of a GargantuanTable.
 // Example:
@@ -14,7 +15,11 @@ class View : public IView
 public:
 	View();
 	virtual void setController(IController* controller);
+	virtual void showText();
 	virtual void showText(std::string text);
 	virtual void showDataSelection();
 	virtual std::string readInput();
+
+private:
+	IController* controller;
 };
