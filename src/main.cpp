@@ -1,61 +1,35 @@
 #include <iostream>
 #include <string>
-#include <vector>
 
-#include "Model.h"
-#include "View.h"
-#include "Controller.h"
+#include "../header/Model.h"
+#include "../header/View.h"
+#include "../header/Controller.h"
 
-std::vector<std::string> convertToString(int wordsNumber, char* input[])
-{
-	std::vector<std::string> args;
-
-	if (wordsNumber > 1)
-	{
-		args.assign(input + 1, input + wordsNumber);
-	}
-
-	return args;
-}
-
-bool fileNotInDir(std::string fileName)
-{
-	// TODO
-
-	return false;
-}
-
-bool fileNameTooShort(std::string fileName)
-{
-	return (fileName.length() == 0);
-}
 
 std::string readInput(IView* view)
 {
-	bool foundFile = false;
+	bool usableInput = false;
 	
-	std::string fileName;
+	std::string readInput;
 
-	view->showText("Please enter filename to compress");
-
-	while (!foundFile)
+	while (!usableInput)
 	{
-		fileName = view->readInput();
+		readInput = view->readInput();
 
 		// Guard clauses
-		if (fileNameTooShort(fileName) ||
-			fileNotInDir(fileName))
+		if (false)			// TODO
 		{
 			break;
 		}
 
-		foundFile = true;
+		usableInput = true;
 	}
 
-	return fileName;
+	return readInput;
 }
 
-int main(int argc, char* argv[])
+
+int main()
 {
 	View		view;
 	Model		model;
@@ -66,12 +40,5 @@ int main(int argc, char* argv[])
 	model.setController(&controller);
 
 
-	std::vector<std::string> args;
-	args = convertToString(argc, argv);
-
-
-	std::string input = readInput(view);
-
-
-	system("pause");								// Make sure the program does not exit by itself
+	std::string input = readInput(&view);
 }

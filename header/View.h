@@ -1,4 +1,4 @@
-#pragma once;
+#pragma once
 
 #include "IView.h"
 	
@@ -9,7 +9,7 @@
 //      process(iter->key(), iter->value());
 //    }
 //    delete iter;
-class View : virtual IView
+class View : public virtual IView
 {
 public:
 	View();

@@ -1,6 +1,6 @@
 #include <iostream>
 
-#include "View.h"
+#include "../header/View.h"
 
 View::View()
 {

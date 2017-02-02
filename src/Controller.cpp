@@ -1,4 +1,4 @@
-#include "Controller.h"
+#include "../header/Controller.h"
 
 Controller::Controller(View * view, Model * model)
 {

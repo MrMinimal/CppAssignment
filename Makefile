@@ -1,2 +1,2 @@
 all:
-	echo "works"
+	g++ src/* -o ./bin/a.out
