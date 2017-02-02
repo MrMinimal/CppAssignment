@@ -35,7 +35,7 @@ std::string View::readInput()
 }
 
 
-void View::showDataSelection()
+void View::showDataSelection(std::list<std::string>* items)
 {
 	showText("Student Tracking Solution");
 	showText();

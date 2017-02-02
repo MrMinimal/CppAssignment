@@ -2,6 +2,7 @@
 
 #include "../header/IView.h"
 #include "../header/IController.h"
+#include "../header/SelectionItem.h"
 	
 // Iterates over the contents of a GargantuanTable.
 // Example:
@@ -17,7 +18,7 @@ public:
 	virtual void setController(IController* controller);
 	virtual void showText();
 	virtual void showText(std::string text);
-	virtual void showDataSelection();
+	virtual void showDataSelection(std::list<std::string>* items);
 	virtual std::string readInput();
 
 private:

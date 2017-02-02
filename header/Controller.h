@@ -1,8 +1,11 @@
 #pragma once
 
-#include "IController.h"
-#include "View.h"
-#include "Model.h"
+#include <list>
+
+#include "../header/IController.h"
+#include "../header/View.h"
+#include "../header/Model.h"
+#include "../header/SelectionItem.h"
 
 // Iterates over the contents of a GargantuanTable.
 // Example:

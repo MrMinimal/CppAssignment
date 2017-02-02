@@ -1,6 +1,6 @@
 #pragma once
 
-#include "IModel.h"
+#include "../header/IModel.h"
 
 // Iterates over the contents of a GargantuanTable.
 // Example:

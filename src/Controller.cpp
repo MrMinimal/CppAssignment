@@ -9,5 +9,11 @@ Controller::Controller(View * view, Model * model)
 
 void Controller::startDB()
 {
-	view->showDataSelection();	
+	std::list<std::string> dataSelectionItems;
+
+	dataSelectionItems.push_back("test1");
+	dataSelectionItems.push_back("test2");
+	dataSelectionItems.push_back("test3");
+
+	view->showDataSelection(&dataSelectionItems);	
 }
