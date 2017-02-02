@@ -15,6 +15,7 @@ class Controller : public IController
 {
 public:
 	Controller(View* view, Model* model);
+	virtual void startDB();
 
 private:
 	// references to different parts of the MVC concept

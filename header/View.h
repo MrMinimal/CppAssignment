@@ -9,11 +9,12 @@
 //      process(iter->key(), iter->value());
 //    }
 //    delete iter;
-class View : public virtual IView
+class View : public IView
 {
 public:
 	View();
 	virtual void setController(IController* controller);
 	virtual void showText(std::string text);
+	virtual void showDataSelection();
 	virtual std::string readInput();
 };

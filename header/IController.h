@@ -9,5 +9,6 @@
 //    delete iter;
 class IController
 {
-
+public:
+	virtual void		startDB() = 0;
 };

@@ -25,3 +25,9 @@ std::string View::readInput()
 
 	return std::string();
 }
+
+
+void View::showDataSelection()
+{
+
+}

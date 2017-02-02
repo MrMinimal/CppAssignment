@@ -39,6 +39,7 @@ int main()
 	view.setController(&controller);
 	model.setController(&controller);
 
+	controller.startDB();
 
 	std::string input = readInput(&view);
 }
