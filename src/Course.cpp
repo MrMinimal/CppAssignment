@@ -10,3 +10,9 @@ void Course::setSpeciality(Speciality* speciality)
 {
 	this->speciality = speciality;
 }
+
+
+std::string Course::getName()
+{
+	return this->name;
+}

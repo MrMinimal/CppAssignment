@@ -2,11 +2,24 @@
 
 Lecturer::Lecturer(std::string preName, std::string surName)
 {
-	// TODO
+	this->preName = preName;
+	this->surName = surName;
 }
 
 
 void Lecturer::setSpeciality(Speciality* speciality)
 {
 	this->speciality = speciality;
+}
+
+
+std::string Lecturer::getPreName()
+{
+	return preName;
+}
+
+
+std::string Lecturer::getSurName()
+{
+	return surName;
 }

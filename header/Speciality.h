@@ -7,6 +7,8 @@ class Speciality
 public:
 	Speciality(std::string name);
 
+	std::string getName();
+
 private:
 	std::string name;
 };

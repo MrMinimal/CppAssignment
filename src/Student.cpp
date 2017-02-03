@@ -11,3 +11,15 @@ void Student::setCourse(Course* course)
 {
 	this->course = course;
 }
+
+
+std::string Student::getPreName()
+{
+	return preName;
+}
+
+
+std::string Student::getSurName()
+{
+	return surName;
+}

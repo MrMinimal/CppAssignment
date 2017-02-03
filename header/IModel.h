@@ -18,8 +18,14 @@ class IModel
 {
 public:
 	virtual void		setController(IController* controller) = 0;
-	virtual Student*	addStudent(std::string preName, std::string surName);
-	virtual Lecturer*	addLecturer(std::string preName, std::string surName);
-	virtual Speciality*	addSpeciality(std::string name);
-	virtual Course*		addCourse(std::string name);
+
+	virtual Student*	getStudent(std::string preName, std::string surName) = 0;
+	virtual Lecturer*	getLecturer(std::string preName, std::string surName) = 0;
+	virtual Speciality*	getSpciality(std::string name) = 0;
+	virtual Course*		getCourse(std::string name) = 0;
+
+	virtual Student*	addStudent(std::string preName, std::string surName) = 0;
+	virtual Lecturer*	addLecturer(std::string preName, std::string surName) = 0;
+	virtual Speciality*	addSpeciality(std::string name) = 0;
+	virtual Course*		addCourse(std::string name) = 0;
 };
