@@ -7,14 +7,55 @@ Controller::Controller(View * view, Model * model)
 }
 
 
-void Controller::startDB()
+void Controller::runDB()
 {
-	std::list<std::string> dataSelectionItems;
+	UIState state = SELECT_DATA_SOURCE;
 
-	dataSelectionItems.push_back("Load from file");
-	dataSelectionItems.push_back("Create new database");
+	bool stopped = false;
+	
+	while (!stopped)
+	{
+		switch (state)
+		{
+			case SELECT_DATA_SOURCE:
+			{
+				std::list<std::string> dataSelectionItems;
 
-	view->showDataSelection(&dataSelectionItems);	
+				dataSelectionItems.push_back("Load from file");
+				dataSelectionItems.push_back("Create new database");
 
-	view->readInput("Selection");
+				view->showDataSelection(&dataSelectionItems);	
+
+				std::string input = view->readInput("Selection");
+
+				// handle input
+				if (input == "1")
+				{
+					state = LOAD_FROM_FILE;
+				}
+				else if (input == "2")
+				{
+					state = CREATE_NEW_DB;
+				}
+
+				break;
+			}
+
+			case LOAD_FROM_FILE:
+			{
+				// TODO show dialog to enter filename
+
+				break;
+			}
+
+			case CREATE_NEW_DB:
+			{
+				// TODO show ui for entering students, etc
+
+				break;
+			}
+		}
+
+		view->showText();
+	}
 }

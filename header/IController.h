@@ -10,5 +10,5 @@
 class IController
 {
 public:
-	virtual void		startDB() = 0;
+	virtual void		runDB() = 0;
 };

@@ -7,6 +7,13 @@
 #include "../header/Model.h"
 #include "../header/SelectionItem.h"
 
+enum UIState
+{
+	SELECT_DATA_SOURCE,
+	LOAD_FROM_FILE,
+	CREATE_NEW_DB
+};
+
 // Iterates over the contents of a GargantuanTable.
 // Example:
 //    GargantuanTableIterator* iter = table->NewIterator();
@@ -18,7 +25,7 @@ class Controller : public IController
 {
 public:
 	Controller(View* view, Model* model);
-	virtual void startDB();
+	virtual void runDB();
 
 private:
 	// references to different parts of the MVC concept

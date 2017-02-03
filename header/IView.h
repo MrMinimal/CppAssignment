@@ -20,7 +20,9 @@ public:
 	virtual void			showText() = 0;
 	virtual void			showText(std::string text) = 0;
 	virtual void			showItem(int index, std::string content) = 0;
+
 	virtual void			showDataSelection(std::list<std::string>* items) = 0 ;
+
 	virtual std::string		readInput() = 0;
 	virtual std::string		readInput(std::string inputDescription) = 0;
 };
