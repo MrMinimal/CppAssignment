@@ -1,4 +1,4 @@
-#include "../header/Lecturer.h"
+#include "../include/Lecturer.h"
 
 Lecturer::Lecturer(std::string preName, std::string surName)
 {

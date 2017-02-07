@@ -3,8 +3,8 @@
 #include <string>
 #include <list>
 
-#include "../header/IController.h"
-#include "../header/SelectionItem.h"
+#include "../include/IController.h"
+#include "../include/SelectionItem.h"
 
 // Iterates over the contents of a GargantuanTable.
 // Example:

@@ -1,4 +1,4 @@
-#include "../header/Student.h"
+#include "../include/Student.h"
 
 Student::Student(std::string preName, std::string surName)
 {

@@ -1,4 +1,4 @@
-#include "../header/View.h"
+#include "../include/View.h"
 
 View::View()
 {

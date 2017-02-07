@@ -2,7 +2,7 @@
 
 #include <string>
 
-#include "../header/Speciality.h"
+#include "../include/Speciality.h"
 
 class Lecturer
 {

@@ -1,9 +1,9 @@
 #include <iostream>
 #include <string>
 
-#include "../header/Model.h"
-#include "../header/View.h"
-#include "../header/Controller.h"
+#include "../include/Model.h"
+#include "../include/View.h"
+#include "../include/Controller.h"
 
 
 std::string readInput(IView* view)

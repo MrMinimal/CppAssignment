@@ -2,10 +2,10 @@
 
 #include <list>
 
-#include "../header/IController.h"
-#include "../header/View.h"
-#include "../header/Model.h"
-#include "../header/SelectionItem.h"
+#include "../include/IController.h"
+#include "../include/View.h"
+#include "../include/Model.h"
+#include "../include/SelectionItem.h"
 
 enum UIState
 {

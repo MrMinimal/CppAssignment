@@ -2,11 +2,11 @@
 
 #include <list>
 
-#include "../header/IModel.h"
-#include "../header/IController.h"
-#include "../header/Course.h"
-#include "../header/Student.h"
-#include "../header/Lecturer.h"
+#include "../include/IModel.h"
+#include "../include/IController.h"
+#include "../include/Course.h"
+#include "../include/Student.h"
+#include "../include/Lecturer.h"
 
 // Model part of the MVC Model
 // 

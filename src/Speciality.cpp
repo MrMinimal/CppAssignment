@@ -1,4 +1,4 @@
-#include "../header/Speciality.h"
+#include "../include/Speciality.h"
 
 Speciality::Speciality(std::string name)
 {

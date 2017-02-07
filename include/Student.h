@@ -2,7 +2,7 @@
 
 #include <string>
 
-#include "../header/Course.h"
+#include "../include/Course.h"
 
 class Student
 {

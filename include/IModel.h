@@ -1,11 +1,11 @@
 #pragma once
 
-#include "../header/IModel.h"
+#include "../include/IModel.h"
 
-#include "../header/IController.h"
-#include "../header/Student.h"
-#include "../header/Lecturer.h"
-#include "../header/Speciality.h"
+#include "../include/IController.h"
+#include "../include/Student.h"
+#include "../include/Lecturer.h"
+#include "../include/Speciality.h"
 
 // Iterates over the contents of a GargantuanTable.
 // Example:
