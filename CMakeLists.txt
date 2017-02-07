@@ -6,4 +6,4 @@ include_directories ("${PROJECT_SOURCE_DIR}/include")
 file(GLOB SOURCES "src/*.cpp")
 add_subdirectory (src) 
 
-add_executable (Tutorial ${SOURCES})
+add_executable (DB ${SOURCES})
