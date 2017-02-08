@@ -4,6 +4,10 @@ project (DB)
 
 include_directories ("${PROJECT_SOURCE_DIR}/include")
 file(GLOB SOURCES "src/*.cpp")
-add_subdirectory (src) 
+add_subdirectory (src)
 
-add_executable (DB ${SOURCES})
+# make sure all include files show up in the project
+FILE(GLOB_RECURSE INC_ALL "include/*.h")
+include_directories("include")
+
+add_executable (DB ${SOURCES} ${INC_ALL})
