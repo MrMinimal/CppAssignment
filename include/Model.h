@@ -18,10 +18,13 @@ public:
 	Model();
 	virtual void setController(IController* controller);
 
-	virtual Student*	getStudent(std::string preName, std::string surName);
-	virtual Lecturer*	getLecturer(std::string preName, std::string surName);
-	virtual Speciality*	getSpciality(std::string name);
-	virtual Course*		getCourse(std::string name);
+	virtual Student*				getStudent(std::string preName, std::string surName);
+	virtual Lecturer*				getLecturer(std::string preName, std::string surName);
+	virtual Speciality*				getSpciality(std::string name);
+	virtual Course*					getCourse(std::string name);
+	virtual std::list<Course*>		getCourses(); 
+	virtual std::list<Student*>		getStudents(); 
+	virtual std::list<Speciality*>	getSpecialities(); 
 
 	virtual Student*	addStudent(std::string preName, std::string surName);
 	virtual Lecturer*	addLecturer(std::string preName, std::string surName);

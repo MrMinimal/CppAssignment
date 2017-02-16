@@ -1,5 +1,7 @@
 #pragma once
 
+#include <list>
+
 #include "../include/IModel.h"
 
 #include "../include/IController.h"
@@ -7,22 +9,18 @@
 #include "../include/Lecturer.h"
 #include "../include/Speciality.h"
 
-// Iterates over the contents of a GargantuanTable.
-// Example:
-//    GargantuanTableIterator* iter = table->NewIterator();
-//    for (iter->Seek("foo"); !iter->done(); iter->Next()) {
-//      process(iter->key(), iter->value());
-//    }
-//    delete iter;
 class IModel
 {
 public:
-	virtual void		setController(IController* controller) = 0;
+	virtual void					setController(IController* controller) = 0;
 
-	virtual Student*	getStudent(std::string preName, std::string surName) = 0;
-	virtual Lecturer*	getLecturer(std::string preName, std::string surName) = 0;
-	virtual Speciality*	getSpciality(std::string name) = 0;
-	virtual Course*		getCourse(std::string name) = 0;
+	virtual Student*				getStudent(std::string preName, std::string surName) = 0;
+	virtual Lecturer*				getLecturer(std::string preName, std::string surName) = 0;
+	virtual Speciality*				getSpciality(std::string name) = 0;
+	virtual Course	*				getCourse(std::string name) = 0;
+	virtual std::list<Course*>		getCourses() = 0; 
+	virtual std::list<Student*>		getStudents() = 0; 
+	virtual std::list<Speciality*>	getSpecialities() = 0; 
 
 	virtual Student*	addStudent(std::string preName, std::string surName) = 0;
 	virtual Lecturer*	addLecturer(std::string preName, std::string surName) = 0;

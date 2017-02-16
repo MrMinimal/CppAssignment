@@ -11,16 +11,9 @@ enum UIState
 {
 	SELECT_DATA_SOURCE,
 	LOAD_FROM_FILE,
-	CREATE_NEW_DB
+	CREATE_NEW_DB,
 };
 
-// Iterates over the contents of a GargantuanTable.
-// Example:
-//    GargantuanTableIterator* iter = table->NewIterator();
-//    for (iter->Seek("foo"); !iter->done(); iter->Next()) {
-//      process(iter->key(), iter->value());
-//    }
-//    delete iter;
 class Controller : public IController
 {
 public:

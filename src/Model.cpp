@@ -128,3 +128,21 @@ Course*		Model::getCourse(std::string name)
 	// reached if no match found
 	return NULL;
 }
+
+
+std::list<Course*> Model::getCourses()
+{
+	return courses;
+}
+
+
+std::list<Student*> Model::getStudents()
+{
+	return students;
+}
+
+
+std::list<Speciality*> Model::getSpecialities()
+{
+	return specialities;
+}

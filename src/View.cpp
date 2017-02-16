@@ -68,3 +68,11 @@ void View::showDataSelection(std::list<std::string>* items)
 
 	showSelection(items);
 }
+
+
+void View::showCreateSelection(std::list<std::string>* items)
+{
+	showText("Please select an option:");
+
+	showSelection(items);
+}

@@ -26,6 +26,7 @@ public:
 	virtual void showItem(int index, std::string content);
 
 	virtual void showDataSelection(std::list<std::string>* items);
+	virtual void showCreateSelection(std::list<std::string>* items);
 
 	virtual std::string		readInput();
 	virtual std::string		readInput(std::string inputDescription);
