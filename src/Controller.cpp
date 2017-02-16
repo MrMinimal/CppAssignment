@@ -89,23 +89,13 @@ void Controller::runDB()
 					view->showText();
 					view->showText("Courses:");
 
-
 					std::list<Course*> courses = model->getCourses();
-
-					std::list<std::string> coursesList; 
 
 					for(std::list<Course*>::iterator iterator = courses.begin(); iterator != courses.end(); iterator++)
 					{
 						Course* currentCourse = *iterator;
 
-						coursesList.push_back(currentCourse->getName());
-					}
-
-					for(std::list<std::string>::iterator iterator = coursesList.begin(); iterator != coursesList.end(); iterator++)
-					{
-						std::string currentName = *iterator;
-
-						view->showText(currentName);
+						view->showText(currentCourse->getName());
 					}
 				}
 				else if (input == "4")
@@ -115,20 +105,11 @@ void Controller::runDB()
 
 					std::list<Student*> students = model->getStudents();
 
-					std::list<std::string> studentList; 
-
 					for(std::list<Student*>::iterator iterator = students.begin(); iterator != students.end(); iterator++)
 					{
 						Student* currentStudent = *iterator;
 
-						studentList.push_back(currentStudent->getPreName() + " " + currentStudent->getSurName());
-					}
-
-					for(std::list<std::string>::iterator iterator = studentList.begin(); iterator != studentList.end(); iterator++)
-					{
-						std::string currentName = *iterator;
-
-						view->showText(currentName);
+						view->showText(currentStudent->getPreName() + " " + currentStudent->getSurName());
 					}
 				}
 
