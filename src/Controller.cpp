@@ -110,7 +110,26 @@ void Controller::runDB()
 				}
 				else if (input == "4")
 				{
+					view->showText();
+					view->showText("Students:");
 
+					std::list<Student*> students = model->getStudents();
+
+					std::list<std::string> studentList; 
+
+					for(std::list<Student*>::iterator iterator = students.begin(); iterator != students.end(); iterator++)
+					{
+						Student* currentStudent = *iterator;
+
+						studentList.push_back(currentStudent->getPreName() + " " + currentStudent->getSurName());
+					}
+
+					for(std::list<std::string>::iterator iterator = studentList.begin(); iterator != studentList.end(); iterator++)
+					{
+						std::string currentName = *iterator;
+
+						view->showText(currentName);
+					}
 				}
 
 				break;
