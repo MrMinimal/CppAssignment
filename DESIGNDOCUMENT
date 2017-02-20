@@ -20,3 +20,8 @@ Die einzige Aufgabe der main-Funktion ist, das Model-View-Controller Modell zu e
 Der Arbeitsaufwand des Projekts betrug 15 Stunden.
 
 Das Projekt wurde plattformunabhaengig programmiert mit Hilfe von CMake. Das Projekt compilt dadurch unter Visual Studio 13,15, Eclipse, QT Creator und GCC.
+Zudem wurde das Projekt mit Git verwaltet und auf GitHub gehostet. Dies ist geschehen, dass paralelles Arbeiten fuer alle Teammitglieder moeglich ist.
+
+Es kam zu keinen Komplikationen waehrend der Entwicklung, da C++ die Sprache ist, welche ich auch im Betrieb verwende.
+Ausschliesslich der Workflow mit git war neu, wobei keine grossen Unterschiede zu SVN den Fortschritt des Projets aufgehalten haben.
+Das Zusammenfuehren von Branches war gut umzusetzen, auch bei merge Konflikten.
