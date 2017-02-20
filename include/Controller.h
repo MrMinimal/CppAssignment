@@ -5,7 +5,6 @@
 #include "../include/IController.h"
 #include "../include/View.h"
 #include "../include/Model.h"
-#include "../include/SelectionItem.h"
 
 // Contains all logic to change data and determines
 // what is shown in the UI.
