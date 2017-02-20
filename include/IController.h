@@ -1,12 +1,7 @@
 #pragma once
 
-// Iterates over the contents of a GargantuanTable.
-// Example:
-//    GargantuanTableIterator* iter = table->NewIterator();
-//    for (iter->Seek("foo"); !iter->done(); iter->Next()) {
-//      process(iter->key(), iter->value());
-//    }
-//    delete iter;
+// Interface for the controller part of the MVC
+
 class IController
 {
 public:

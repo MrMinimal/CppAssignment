@@ -7,18 +7,21 @@ Controller::Controller(View * view, Model * model)
 }
 
 
+// main loop to read input and react to it
 void Controller::runDB()
 {
 	UIState state = SELECT_DATA_SOURCE;
 
 	bool stopped = false;
 	
+	// main loop
 	while (!stopped)
 	{
 		switch (state)
 		{
 			case SELECT_DATA_SOURCE:
 			{
+				// All selectable option strings for the user
 				std::list<std::string> dataSelectionItems;
 
 				dataSelectionItems.push_back("Load from file");
@@ -53,12 +56,14 @@ void Controller::runDB()
 
 			case CREATE_NEW_DB:
 			{
+				// All selectable option strings for the user
 				std::list<std::string> createSelectionItems;
 
 				createSelectionItems.push_back("Create new course");
 				createSelectionItems.push_back("Create new student");
 				createSelectionItems.push_back("Show courses");
 				createSelectionItems.push_back("Show students");
+				createSelectionItems.push_back("Assign course to student");
 
 				view->showCreateSelection(&createSelectionItems);	
 
@@ -111,6 +116,13 @@ void Controller::runDB()
 
 						view->showText(currentStudent->getPreName() + " " + currentStudent->getSurName());
 					}
+				}
+				else if (input == "5")
+				{
+					view->showText("Please assign a student to a course");
+
+					std::string studentName = view->readInput("student");
+					std::string courseName  = view->readInput("course");
 				}
 
 				break;

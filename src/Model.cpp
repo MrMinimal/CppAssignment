@@ -67,7 +67,7 @@ Student*	Model::getStudent(std::string preName, std::string surName)
 		}
 	}
 
-	// reached if no match found
+	// no match found
 	return NULL;
 }
 
@@ -87,7 +87,7 @@ Lecturer*	Model::getLecturer(std::string preName, std::string surName)
 		}
 	}
 
-	// reached if no match found
+	// no match found
 	return NULL;
 }
 
@@ -106,7 +106,7 @@ Speciality*	Model::getSpciality(std::string name)
 		}
 	}
 
-	// reached if no match found
+	// no match found
 	return NULL;
 }
 

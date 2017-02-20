@@ -4,6 +4,8 @@
 
 #include "../include/Speciality.h"
 
+// Representation of one course
+
 class Course
 {
 public:

@@ -7,12 +7,19 @@
 #include "../include/Model.h"
 #include "../include/SelectionItem.h"
 
+// Contains all logic to change data and determines
+// what is shown in the UI.
+// Communicates via the IModel and IView interface
+// with model and view respectively.
+
+// All input states the UI can have
 enum UIState
 {
 	SELECT_DATA_SOURCE,
 	LOAD_FROM_FILE,
 	CREATE_NEW_DB,
 };
+
 
 class Controller : public IController
 {

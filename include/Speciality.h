@@ -2,6 +2,8 @@
 
 #include <string>
 
+// Representation of one speciality
+
 class Speciality
 {
 public:

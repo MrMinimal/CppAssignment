@@ -9,9 +9,9 @@
 #include "../include/Lecturer.h"
 
 // Model part of the MVC Model
-// 
 // Holds all the relevant data to save/load
 // Communicates via the IModel interface with the Controller
+
 class Model : public IModel
 {
 public:

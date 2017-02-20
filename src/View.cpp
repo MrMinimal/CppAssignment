@@ -6,6 +6,7 @@ View::View()
 	showText();
 }
 
+
 void View::setController(IController* controller)
 {
 	this->controller = controller;	
@@ -42,12 +43,14 @@ std::string	View::readInput(std::string inputDescription)
 }
 
 
+// Display string with index specified
 void View::showItem(int index, std::string content)
 {
 	std::cout << std::to_string(index + 1) << ". " << content << std::endl;
 }
 
 
+// Display items in list with index
 void View::showSelection(std::list<std::string>* items)
 {
 	// iterate over all items
@@ -64,7 +67,7 @@ void View::showSelection(std::list<std::string>* items)
 
 void View::showDataSelection(std::list<std::string>* items)
 {
-	showText("Please select an option:");
+	showText("Please select database source");
 
 	showSelection(items);
 }
@@ -72,7 +75,7 @@ void View::showDataSelection(std::list<std::string>* items)
 
 void View::showCreateSelection(std::list<std::string>* items)
 {
-	showText("Please select an option:");
+	showText("Please select what to create/edit");
 
 	showSelection(items);
 }

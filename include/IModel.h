@@ -9,6 +9,10 @@
 #include "../include/Lecturer.h"
 #include "../include/Speciality.h"
 
+// Interface for the model part of the MVC
+// Needed in order to provide communication
+// between controller and model
+
 class IModel
 {
 public:

@@ -6,13 +6,10 @@
 #include "../include/IController.h"
 #include "../include/SelectionItem.h"
 
-// Iterates over the contents of a GargantuanTable.
-// Example:
-//    GargantuanTableIterator* iter = table->NewIterator();
-//    for (iter->Seek("foo"); !iter->done(); iter->Next()) {
-//      process(iter->key(), iter->value());
-//    }
-//    delete iter;
+// Interface for the view part of the MVC
+// Needed in order to provide communication
+// between controller and view
+
 class IView
 {
 public:

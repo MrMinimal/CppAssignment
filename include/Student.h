@@ -4,6 +4,8 @@
 
 #include "../include/Course.h"
 
+// Representation of one student
+
 class Student
 {
 public:

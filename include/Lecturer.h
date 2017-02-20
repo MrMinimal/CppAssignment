@@ -4,6 +4,8 @@
 
 #include "../include/Speciality.h"
 
+// Representation of one lecturer
+
 class Lecturer
 {
 public:

@@ -5,25 +5,20 @@
 
 #include "../include/IView.h"
 #include "../include/IController.h"
-#include "../include/SelectionItem.h"
 	
-// Iterates over the contents of a GargantuanTable.
-// Example:
-//    GargantuanTableIterator* iter = table->NewIterator();
-//    for (iter->Seek("foo"); !iter->done(); iter->Next()) {
-//      process(iter->key(), iter->value());
-//    }
-//    delete iter;
+// View part of the MVC Model
+// Holds all logic to display a UI, but not the contents its self
+// Communicates via the IView interface with the Controller
+
 class View : public IView
 {
 public:
 	View();
 	virtual void setController(IController* controller);
 
+	// Display lines of text
 	virtual void showText();
 	virtual void showText(std::string text);
-
-	virtual void showItem(int index, std::string content);
 
 	virtual void showDataSelection(std::list<std::string>* items);
 	virtual void showCreateSelection(std::list<std::string>* items);
@@ -33,5 +28,10 @@ public:
 
 private:
 	IController* controller;
+
+	// Display items in list with index
 	virtual void showSelection(std::list<std::string>* items);
+
+	// Display string with index specified
+	virtual void showItem(int index, std::string content);
 };
