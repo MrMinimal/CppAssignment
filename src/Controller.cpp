@@ -115,6 +115,14 @@ void Controller::runDB()
 						Student* currentStudent = *iterator;
 
 						view->showText(currentStudent->getPreName() + " " + currentStudent->getSurName());
+
+						// if the student is assigned to a course, output it as well
+						Course* course = currentStudent->getCourse();
+
+						if (course)
+						{
+							view->showText("\t" + course->getName());	
+						}
 					}
 				}
 				else if (input == "5")

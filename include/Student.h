@@ -15,6 +15,8 @@ public:
 	std::string getPreName();
 	std::string getSurName();
 
+	Course* getCourse();
+
 private:
 	std::string surName;
 	std::string preName;

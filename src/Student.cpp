@@ -23,3 +23,9 @@ std::string Student::getSurName()
 {
 	return surName;
 }
+
+
+Course* Student::getCourse()
+{
+	return this->course;
+}
