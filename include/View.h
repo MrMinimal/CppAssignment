@@ -14,9 +14,9 @@ class View : public IView
 {
 public:
 	View();
+
 	virtual void setController(IController* controller);
 
-	// Display lines of text
 	virtual void showText();
 	virtual void showText(std::string text);
 
