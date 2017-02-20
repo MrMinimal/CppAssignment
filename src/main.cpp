@@ -6,29 +6,6 @@
 #include "../include/Controller.h"
 
 
-std::string readInput(IView* view)
-{
-	bool usableInput = false;
-	
-	std::string readInput;
-
-	while (!usableInput)
-	{
-		readInput = view->readInput();
-
-		// Guard clauses
-		if (false)			// TODO
-		{
-			continue;
-		}
-
-		usableInput = true;
-	}
-
-	return readInput;
-}
-
-
 int main()
 {
 	View		view;

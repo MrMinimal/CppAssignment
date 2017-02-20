@@ -121,8 +121,34 @@ void Controller::runDB()
 				{
 					view->showText("Please assign a student to a course");
 
-					std::string studentName = view->readInput("student");
-					std::string courseName  = view->readInput("course");
+					std::string studentPreName	= view->readInput("Prename");
+					std::string studentSurName	= view->readInput("Surname");
+					std::string courseName		= view->readInput("Course ");
+
+					Student* student	= model->getStudent(studentPreName, studentSurName);
+					Course* course		= model->getCourse(courseName);
+
+					// sanity checks
+					if (student == NULL)
+					{
+						view->showText("Please enter an existing student");
+						break;
+					}
+
+					if (course == NULL)
+					{
+						view->showText("Please enter an existing course");
+						break;
+					}
+
+					// only if sanity checks passed
+					student->setCourse(course);
+
+					view->showText("Successfully assigned " + studentPreName 
+									+ " "
+									+ studentSurName  
+									+ " to " 
+									+ course->getName());
 				}
 
 				break;
